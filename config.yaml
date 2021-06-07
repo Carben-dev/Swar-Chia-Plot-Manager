@@ -195,7 +195,7 @@ jobs:
     concurrency_start_early_phase_delay: 0
     temporary2_destination_sync: false
     exclude_final_directory: true
-    skip_full_destinations: true
+    skip_full_destinations: false
     unix_process_priority: 10
     windows_process_priority: 32
     enable_cpu_affinity: false
