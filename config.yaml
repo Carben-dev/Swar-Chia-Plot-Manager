@@ -33,7 +33,7 @@ view:
   #               include_cpu: This dictates whether the CPU information will be showed.
   #               include_ram: This dictates whether the RAM information will be showed.
   #        include_plot_stats: This dictates whether the plot stats will be showed.
-  check_interval: 10
+  check_interval: 5
   datetime_format: "%Y-%m-%d %H:%M:%S"
   include_seconds_for_phase: false
   include_drive_info: true
@@ -106,8 +106,8 @@ global:
   #                               multiple jobs from starting at the exact same time. This will alleviate congestion
   #                               on destination drive. Set to 0 to disable.
   max_concurrent: 5
-  max_for_phase_1: 2
-  minimum_minutes_between_jobs: 5
+  max_for_phase_1: 4
+  minimum_minutes_between_jobs: 0
 
 
 jobs:
@@ -185,12 +185,12 @@ jobs:
     bitfield: true
     threads: 4
     buckets: 128
-    memory_buffer: 6000
+    memory_buffer: 5500
     max_concurrent: 5
     max_concurrent_with_start_early: 7
     initial_delay_minutes: 0
-    stagger_minutes: 60
-    max_for_phase_1: 2
+    stagger_minutes: 0
+    max_for_phase_1: 4
     concurrency_start_early_phase: 4
     concurrency_start_early_phase_delay: 0
     temporary2_destination_sync: false
